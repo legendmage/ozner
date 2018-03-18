@@ -62,14 +62,18 @@ html,body{
 
 #nav{
     float:left;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-left: 55px;
 }
 #nav ul li{
-    float:left;
     display: inline-block;
     padding: 15px 25px;
     font-size: 18px;
     font-weight: 500;
+}
+
+#nav ul li a.active{
+    color: #ff3f2f;
 }
 
 #telphone{
@@ -327,7 +331,7 @@ html,body{
 
 .company .inline{
     float: left;
-    margin-right: 69px;
+    padding-right: 80px;
 }
 
 .qr-code1 img, 
