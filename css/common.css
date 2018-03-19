@@ -73,7 +73,7 @@ html,body{
 }
 
 #nav ul li a.active{
-    color: #ff3f2f;
+    color: #ff9900;
 }
 
 #telphone{
@@ -88,6 +88,7 @@ html,body{
 
 /* adv */
 .adv{
+    width: 1349px;
     height:460px;
     position: relative;
 }
@@ -283,10 +284,6 @@ html,body{
     width:450px;
 }
 
-.w-list{
-    /* list-style: inside;
-    padding-left: 10px; */
-}
 .w-list li.w-list-item{
     border-bottom:1px dashed #ccc;
     position: relative;
@@ -339,3 +336,226 @@ html,body{
     width: 130px;
     height: 130px;
 }
+
+
+/* 产品展示 关于我们 新闻资讯 联系我们*/
+#cpzs,
+#gywm,
+#xwzx,
+#lxwm{
+    width: 960px;
+    margin: 0 auto;
+    min-height:500px;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+#cpzs .p-type{
+    margin-top: 15px;
+}
+
+#cpzs .p-type li{
+    float: left;
+    width: 235px;
+    background-color: #e6e6e6;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0 5px 5px;
+    cursor: pointer;
+}
+
+#cpzs .p-type li:hover,
+#cpzs .p-type li:focus{
+    background-color: #ff5344;
+    color: #fff;
+}
+
+#cpzs .p-list{
+    padding-top: 5px;
+    clear: both;
+}
+
+#cpzs .p-list li{
+    display: inline-block;
+    width: 317.5px;
+}
+
+#cpzs .p-list li a{
+    display: block;
+    color: #614444;
+    padding-left: 10px;
+    border: 1px solid #fff;
+    padding-bottom: 35px;
+}
+
+#cpzs .p-list li a:hover{
+    color: #614444;
+    text-decoration:underline;
+    border: 1px solid #ff5245;
+}
+
+#cpzs .p-list li a .w-pl-title{
+    color: #614444;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+#cpzs .p-list li a img{
+    width: 300px;
+    height: 240px;
+}
+
+.page{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    /* background-color: #c0dff1; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+.page ul li:hover,
+.page ul li:focus,
+.page ul li.active {
+    background-color:#c6c6c6;
+}
+
+#gywm .title{
+    margin-top: 20px;
+}
+
+#gywm .title h3{
+    box-sizing: border-box;
+    line-height: 1.1;
+    margin: 7px 0px 3px;
+    padding: 0px;
+    font-family: Arial, 微软雅黑;
+    font-weight: normal;
+    font-size: 24px;
+    white-space: normal;
+    outline: none !important;
+}
+
+#gywm .title h5{
+    box-sizing: border-box;
+    line-height: 1.1;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, 微软雅黑;
+    font-weight: normal;
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    text-transform: uppercase;
+    white-space: normal;
+    outline: none !important;
+}
+
+#gywm .text{
+    margin-top: 50px;
+}
+
+#gywm .text p{
+    box-sizing: border-box; 
+    line-height: 1.4; 
+    margin: 0px; 
+    padding: 0px; 
+    outline: none !important; 
+    font-size: 16px; 
+    font-family: 微软雅黑, "Microsoft YaHei";
+    color: rgb(102, 102, 102);
+    text-indent: 32px;
+    margin: 15px 0px;
+}
+
+#gywm .text p.img{
+    text-indent: 0;
+}
+
+#gywm .text p.img img{
+    width: 960px;
+}
+
+#xwzx .xw-list{
+    width: 100%;
+}
+#xwzx .xw-list li{
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px dotted #ccc;
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#xwzx .xw-list li p{
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#xwzx .xw-list li .info{
+    margin-top: 10px;
+}
+
+#xwzx .xw-list li .date{
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: #999;
+    text-decoration: none;
+}
+#xwzx .xw-list li .count{
+    line-height: 25px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: #999;
+    text-decoration: none;
+    float: right;
+   
+}
+
+
+.iconfont{
+    
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background: url("../images/eye2.png") no-repeat 5px 8px;
+}
+
+#lxwm .addr{
+    width: 100%;
+    text-align: center;
+    color: rgb(12, 12, 12); 
+    font-family: 微软雅黑, 
+    'Microsoft YaHei'; 
+    font-size: 22px;
+}
+#lxwm .addr p{
+    margin: 20px 0px;
+}
+
+#lxwm .addr span{
+    text-decoration:underline;
+}
+
+#lxwm .img img{
+    width: 960px;
+}
+
+

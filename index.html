@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad",
+                "iPod"];    //常用的手机系统版本
+            var flag = true;    //建立标志
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;    //如果是手机版本返回false
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        window.onload = function () {
+            if (IsPC()) {
+                //pc
+                window.location.href="./web/index.html";
+            } else {
+                //安卓
+                window.location.href="./app/index.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
