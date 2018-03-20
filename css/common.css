@@ -380,29 +380,47 @@ html,body{
     width: 317.5px;
 }
 
-#cpzs .p-list li a{
+#cpzs .p-list li a.p-item{
     display: block;
     color: #614444;
     padding-left: 10px;
     border: 1px solid #fff;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
 }
 
-#cpzs .p-list li a:hover{
+#cpzs .p-list li a.p-item:hover{
     color: #614444;
-    text-decoration:underline;
     border: 1px solid #ff5245;
 }
 
-#cpzs .p-list li a .w-pl-title{
+#cpzs .p-list li a.p-item .w-pl-title{
     color: #614444;
     font-size: 14px;
     margin-left: 10px;
+    padding-bottom: 15px;
+}
+#cpzs .p-list li a.p-item .w-pl-title:hover{
+    
+    text-decoration:underline;
+    
 }
 
-#cpzs .p-list li a img{
+#cpzs .p-list li a.p-item img{
     width: 300px;
     height: 240px;
+}
+
+#cpzs .p-list li a.p-item .buy{
+    cursor: pointer;
+    color: #fff;
+    padding: 5px;
+    background-color: #ff5245;
+    margin-left: 10px;
+}
+#cpzs .p-list li a.p-item .buy:hover,
+#cpzs .p-list li a.p-item .buy:focus{
+    background-color: #ff3f2f;
+    text-decoration:none !important;
 }
 
 .page{
