@@ -363,7 +363,7 @@ html,body{
     padding: 5px 0 5px 5px;
     cursor: pointer;
 }
-
+#cpzs .p-type li.active,
 #cpzs .p-type li:hover,
 #cpzs .p-type li:focus{
     background-color: #ff5344;
