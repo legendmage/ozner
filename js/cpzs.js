@@ -1,6 +1,7 @@
 $(function () {
     initType();
     initProduct();
+
 })
 
 //商品分类
@@ -69,7 +70,85 @@ function initProduct(typeId) {
                     str += '</li>';
                     $("#cpzs-list ul").append(str);
                 });
+                $("#cpzs-total").val(data.productlist1[0].total);
+                $("#cpzs-pageindex").val(data.productlist1[0].pageIndex);
+                initPage();
             }
         })
 
+}
+
+function initPage() {
+    var str = '<li data-index="prev" onclick="clickPage(-1)">上一页</li>';
+    var total = $("#cpzs-total").val();
+    var index = $("#cpzs-pageindex").val();
+    var forIndex = 0;
+    if ((parseInt(total) % 9) == 0) {
+        forIndex = parseInt(parseInt(total) / 9);
+    } else {
+        forIndex = parseInt(parseInt(total) / 9) + 1;
+    }
+
+    for (var i = 0; i < forIndex; i++) {
+        if (index == (i + 1)) {
+            str += '<li class="pageindex active" data-index="' + (i + 1) + '">' + (i + 1) + '</li>';
+        } else {
+            str += '<li class="pageindex" data-index="' + (i + 1) + '">' + (i + 1) + '</li>';
+        }
+    }
+    str += '<li data-index="next">下一页</li>';
+
+    $("#cpzs-page ul").html("");
+    if (total > 0) {
+        $("#cpzs-page ul").append(str);
+    }
+}
+
+
+function clickPage(pIndex) {
+    debugger
+    var total = $("#cpzs-total").val();
+    var index = $("#cpzs-pageindex").val();
+    var forIndex = 0;
+    if ((parseInt(total) % 9) == 0) {
+        forIndex = parseInt(parseInt(total) / 9);
+    } else {
+        forIndex = parseInt(parseInt(total) / 9) + 1;
+    }
+    //上一页
+    if (pIndex == -1 && index > 1 && index <= forIndex) {
+        $('#cpzs-page ul li.pageindex').each(function () {
+            var self = this;
+            var value = $(self).attr('data-index');
+            if (value == (index - 1)) {
+                $(self).addClass('active');
+            } else {
+                $(self).removeClass('active');
+            }
+        });
+    }
+    //下一页
+    if (pIndex == -2 && index >= 1 && index < forIndex) {
+        $('#cpzs-page ul li.pageindex').each(function () {
+            var self = this;
+            var value = $(self).attr('data-index');
+            if (value == (index + 1)) {
+                $(self).addClass('active');
+            } else {
+                $(self).removeClass('active');
+            }
+        });
+    }
+    //点击页
+    if (pIndex != index) {
+        $('#cpzs-page ul li.pageindex').each(function () {
+            var self = this;
+            var value = $(self).attr('data-index');
+            if (value == pIndex) {
+                $(self).addClass('active');
+            } else {
+                $(self).removeClass('active');
+            }
+        });
+    }
 }
